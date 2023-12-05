@@ -23,7 +23,6 @@ struct ContentView: View {
                 
                 HStack(spacing: 12.0) {
                     Spacer()
-                    
                     Button {
                         verificationTool.save()
                     } label: {
@@ -35,7 +34,6 @@ struct ContentView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .frame(width: 300.0 / 2.0 - 8.0)
-                    
                     Button {
                         verificationTool.load()
                     } label: {
@@ -47,7 +45,6 @@ struct ContentView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .frame(width: 300.0 / 2.0 - 8.0)
-                    
                     Spacer()
                 }
             }

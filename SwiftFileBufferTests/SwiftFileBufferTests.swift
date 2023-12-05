@@ -25,30 +25,85 @@ final class SwiftFileBufferTests: XCTestCase {
         _testLotsOfRandomFiles(size: 100000)
     }
     
-    func test1000000() {
+    func test1000000_01() {
         _testLotsOfRandomFiles(size: 1000000)
     }
     
-    func test2000000() {
-        _testLotsOfRandomFiles(size: 2000000)
+    func test1000000_02() {
+        _testLotsOfRandomFiles(size: 1000000)
     }
     
-    func test3000000() {
-        _testLotsOfRandomFiles(size: 3000000)
+    func test1000000_03() {
+        _testLotsOfRandomFiles(size: 1000000)
     }
     
-    func test4000000() {
-        _testLotsOfRandomFiles(size: 4000000)
+    func test1000000_04() {
+        _testLotsOfRandomFiles(size: 1000000)
     }
     
-    func test5000000() {
-        _testLotsOfRandomFiles(size: 5000000)
+    func test1000000_05() {
+        _testLotsOfRandomFiles(size: 1000000)
     }
     
-    func test10000000() {
-        _testLotsOfRandomFiles(size: 10000000)
+    func test1000000_06() {
+        _testLotsOfRandomFiles(size: 1000000)
     }
     
+    func test1000000_07() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_08() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_09() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_10() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_11() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_12() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_13() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_14() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_15() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_16() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_17() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_18() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_19() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
+    
+    func test1000000_20() {
+        _testLotsOfRandomFiles(size: 1000000)
+    }
     
     static func randomData() -> Data {
         randomData(length: Int.random(in: 0...512))
@@ -80,7 +135,6 @@ final class SwiftFileBufferTests: XCTestCase {
         case bool(Bool)
         
         static func random() -> TestNodeHardcore {
-            
             let choice = Int.random(in: 0...12)
             if choice == 0 {
                 let data = SwiftFileBufferTests.randomData()
@@ -112,19 +166,14 @@ final class SwiftFileBufferTests: XCTestCase {
                 return TestNodeHardcore.bool(Bool.random())
             }
         }
-        
     }
     
     func _testLotsOfRandomFiles(size: Int) {
-        
         var loop = 0
         while loop < size {
-            
             loop += 1
             if size > 100 {
-                
                 if ((loop % 10000) == 0) || (loop == size) {
-                
                     let percent = Float(loop) / Float(size)
                     let percentString = String(format: "%.1f%%", percent * 100.0)
                     if loop == size {
@@ -140,10 +189,8 @@ final class SwiftFileBufferTests: XCTestCase {
             var testNodes = [TestNodeHardcore]()
             var loop = 0
             while loop < count {
-                
                 let testNode = TestNodeHardcore.random()
                 testNodes.append(testNode)
-                
                 switch testNode {
                 case .data(let data):
                     fileBuffer.writeData(data)
